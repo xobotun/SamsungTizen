@@ -13,53 +13,134 @@
 
     <title>Tizen Web IDE - Tizen - Tizen basic Application</title>
 
+	<link rel="stylesheet"  href="./lib/tau/mobile/theme/default/tau.css">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <script src="js/main.js"></script>
 </head>
 
 <body>
-  <header>
-    <hgroup>
-      <h1>Tizen app</h1>
-      <h2> template of tizen</h2>
-    </hgroup>
-  </header>
-
-
-  <nav>
-    <ul>
-       <li><a href="index.html">Home</a></li>
-    </ul>
-  </nav>
-
-  <article>
-
-      <h1>
-        <img src="images/tizen_32.png" width="32"/> Application Name
-      </h1>
-    </header>
-    <p>This is an empty template of Tizen Web Application. Tizen will support multiple device categories:</p>
-    <ul>
-      <li>smartphones, tablets and smart TVs
-      <li>netbooks, in-vehicle infotainment devices
-    </ul>
-    <section>
-      <p>This is a basic section of a document.</p>
-      <p>The following button displays a time using JavaScript.</p>
-      <div id="divbutton1">
-        <button onclick="startTime();">Clock</button>
-      </div>
-    </section>
-    <section>
-      <p>The following link leads to a secret page.</p>
-      <div id="divbutton2">
-        <a href="page.html">link</a>
-      </div>
-    </section>
-  </article>
-
-  <footer>
-    <p>&copy; 2012 Company Name. All rights reserved.</p>
-  </footer>    
+	<div class="ui-page" id="first">
+	  <div class="ui-header">
+	    <hgroup>
+	      <h1>Tizen app</h1>
+	      <h2> template of tizen</h2>
+	    </hgroup>
+	  </div>
+	
+	  <div class="ui-content">
+		  <nav>
+		    <ul>
+		       <li><a href="#first">Home</a></li>
+		    </ul>
+		  </nav>
+	      <h1>
+	        <img src="images/tizen_32.png" width="32"/> Application Name
+	      </h1>
+	    <p>This is an empty template of Tizen Web Application. Tizen will support multiple device categories:</p>
+	    <ul>
+	      <li>smartphones, tablets and smart TVs
+	      <li>netbooks, in-vehicle infotainment devices
+	    </ul>
+	    <section>
+	      <p>This is a basic section of a document.</p>
+	      <p>The following button displays a time using JavaScript.</p>
+	      <div id="divbutton1">
+	        <button onclick="startTime();">Clock</button>
+	      </div>
+	    </section>
+	    <section>
+	      <p>The following link leads to a secret page.</p>
+	      <div id="divbutton2">
+	        <a href="#second">link</a>
+	      </div>
+	    </section>
+	    <section>
+	      <p>The following link leads to the third page.</p>
+	      <div id="divbutton3">
+	        <a href="#third">link</a>
+	      </div>
+	    </section>
+	  </div>
+	
+	  <div class="ui-footer">
+	    <p>&copy; 2012 Company Name. All rights reserved.</p>
+	  </div>    
+	  <script type="text/javascript" src="./lib/tau/mobile/js/tau.js"></script>
+	</div>
+	
+	<div class="ui-page" id="second">
+	  <div class="ui-header">
+	    <hgroup>
+	      <h1>Tizen app</h1>
+	      <h2>Secret Page!</h2>
+	    </hgroup>
+	  </div>
+		
+	  <div class="ui-content">
+	    <nav>
+	      <ul>
+	        <li><a href="#first">Home</a></li>
+	        <li><a href="#second">secret</a></li>
+	      </ul>
+	    </nav>
+	    <section>
+	      <p>The following button hides or shows an image.</p>
+	      <div id="divbutton1">
+	        <button onclick="revertImageVisibility();">Show/Hide</button>
+	      </div>
+	      <div id="divimg">
+	        <img id="img" src="images/tizen_32.png" />
+	      </div>
+	    </section>
+	    <section>
+	      <p>The following button displays screen dimensions.</p>
+	      <div id="divbutton2">
+	        <button onclick="showScreenData();">WxH</button>
+	      </div>
+	      <div id="divtext">
+	      </div>
+	    </section>
+	  </div>
+	
+	  <div class="ui-footer">
+	    <p>&copy; 2018 Company Name. All rights reserved.</p>
+	  </div>    
+	</div>
+	
+	<div class="ui-page" id="third">
+	  <div class="ui-header">
+	    <hgroup>
+	      <h1>Tizen app</h1>
+	      <h2>Third page.</h2>
+	    </hgroup>
+	  </div>
+		
+	  <div class="ui-content">
+	    <nav>
+	      <ul>
+	        <li><a href="#first">Home</a></li>
+	        <li><a href="#second">third</a></li>
+	      </ul>
+	    </nav>
+	    <section>
+	      <p id="third__text">The following button changes color of this text using jQuery.</p>
+	      <div id="divbutton1">
+	        <button onclick="alert('todo!');">Colorify!</button>
+	      </div>
+	    </section>
+	    <section>
+	      <p>The following button displays screen dimensions.</p>
+	      <div id="divbutton2">
+	        <button onclick="showScreenData();">WxH</button>
+	      </div>
+	      <div id="divtext">
+	      </div>
+	    </section>
+	  </div>
+	
+	  <div class="ui-footer">
+	    <p>&copy; 2018 Company Name. All rights reserved.</p>
+	  </div>    
+	</div>
 </body>
 </html>
