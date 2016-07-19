@@ -65,6 +65,12 @@
 	        <a href="#fourth">link</a>
 	      </div>
 	    </section>
+	    <section>
+	      <p>The following link leads to the canvas page.</p>
+	      <div id="divbutton5">
+	        <a href="#fifth">link</a>
+	      </div>
+	    </section>
 	  </div>
 	
 	  <div class="ui-footer">
@@ -143,7 +149,7 @@
 	  <div class="ui-header">
 	    <hgroup>
 	      <h1>Tizen app</h1>
-	      <h2>Third page.</h2>
+	      <h2>Video page.</h2>
 	    </hgroup>
 	  </div>
 		
@@ -151,20 +157,76 @@
 	    <nav>
 	      <ul>
 	        <li><a href="#first">Home</a></li>
-	        <li><a href="#fourth">fourth</a></li>
+	        <li><a href="#fourth">video</a></li>
 	      </ul>
 	    </nav>
 	    <section>
 	      <p>This is a local video.</p>
-		      <video controls>
+		      <video controls width='360' height='270'>
 			 	 <source src="media/_TouchCube.mp4" type="video/mp4">
 			  </video>
 	    </section>
 	    <section>
 	      	<p>This is a YouTube video.</p>
-			  	<iframe
+			  	<iframe width='360' height='270'
 				src="https://www.youtube.com/embed/zi8VTeDHjcM">
 				</iframe>
+	    </section>
+	  </div>
+	
+	  <div class="ui-footer">
+	    <p>&copy; 2018 Company Name. All rights reserved.</p>
+	  </div>    
+	</div>
+	
+	<div class="ui-page" id="fifth">
+	  <div class="ui-header">
+	    <hgroup>
+	      <h1>Tizen app</h1>
+	      <h2>Canvas page.</h2>
+	    </hgroup>
+	  </div>
+		
+	  <div class="ui-content">
+	    <nav>
+	      <ul>
+	        <li><a href="#first">Home</a></li>
+	        <li><a href="#fifth">canvas</a></li>
+	      </ul>
+	    </nav>
+	    <section>
+	      <p>This is a canvas. Whatever it is.</p>
+		      <canvas id='draw' width='360' height='270' style='border:1px solid;'></canvas> 
+				<script type='text/javascript'>
+				var canvas=document.getElementById("draw")
+				var x=canvas.getContext("2d");
+				
+				var grad = x.createLinearGradient(50,50,150,150);
+				/* Добавляем точки цветового перехода */
+				grad.addColorStop(0.0,'#d2006b');//Розовый цвет в начале
+				grad.addColorStop(0.5,'#00a779');//Бирюзовый цвет в середине
+				grad.addColorStop(1.0,'#ffe800');//Желтый цвет в конце
+				/* Устанавливаем получившийся градиент как свойство заливки */ 
+				x.fillStyle=grad;
+				/* Рисуем фигиру, к которой будет применен созданный градиент */
+				x.fillRect(0,0,360,270);
+				
+				x.fillStyle = "red"; 
+				x.fillRect(25, 30, 180, 120);
+
+				x.fillStyle = "white"; 
+				x.fillText("Теперь я могу отображать", 15, 40);
+
+				x.font='25px Arial';
+				x.fillStyle='#007439';  
+				x.fillText("произвольный текст", 100, 70); 
+				
+				x.shadowOffsetX=3;
+				x.shadowOffsetY=3;
+				x.shadowBlur=5;
+				x.shadowColor='black';
+				x.fillText("в элементе canvas.", 60, 120);
+				</script>
 	    </section>
 	  </div>
 	
