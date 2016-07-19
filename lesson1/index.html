@@ -59,6 +59,12 @@
 	        <a href="#third">link</a>
 	      </div>
 	    </section>
+	    <section>
+	      <p>The following link leads to the video page.</p>
+	      <div id="divbutton4">
+	        <a href="#fourth">link</a>
+	      </div>
+	    </section>
 	  </div>
 	
 	  <div class="ui-footer">
@@ -117,21 +123,13 @@
 	    <nav>
 	      <ul>
 	        <li><a href="#first">Home</a></li>
-	        <li><a href="#second">third</a></li>
+	        <li><a href="#third">third</a></li>
 	      </ul>
 	    </nav>
 	    <section>
 	      <p id="third__text">The following button changes color of this text using jQuery.</p>
 	      <div id="divbutton1">
 	        <button onclick="colorifyThirdText();">Colorify!</button>
-	      </div>
-	    </section>
-	    <section>
-	      <p>This is a video.</p>
-	      <div id="divbutton2">
-	        <button onclick="showScreenData();">WxH</button>
-	      </div>
-	      <div id="divtext">
 	      </div>
 	    </section>
 	  </div>
@@ -141,6 +139,43 @@
 	  </div>    
 	</div>
 	
+		<div class="ui-page" id="fourth">
+	  <div class="ui-header">
+	    <hgroup>
+	      <h1>Tizen app</h1>
+	      <h2>Third page.</h2>
+	    </hgroup>
+	  </div>
+		
+	  <div class="ui-content">
+	    <nav>
+	      <ul>
+	        <li><a href="#first">Home</a></li>
+	        <li><a href="#fourth">fourth</a></li>
+	      </ul>
+	    </nav>
+	    <section>
+	      <p>This is a local video.</p>
+	      <div class="videoContainer">
+		      <video controls>
+			 	 <source src="media/_TouchCube.mp4" type="video/mp4">
+			  </video>
+		  </div>
+	    </section>
+	    <section>
+	      	<p>This is a YouTube video.</p>
+	      	<div class="videoContainer">
+			  	<iframe
+				src="https://www.youtube.com/embed/zi8VTeDHjcM">
+				</iframe>
+			</div>
+	    </section>
+	  </div>
+	
+	  <div class="ui-footer">
+	    <p>&copy; 2018 Company Name. All rights reserved.</p>
+	  </div>    
+	</div>
 	
 	<script type="text/javascript" src="./lib/tau/mobile/js/tau.min.js"></script>
 	<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
