@@ -198,7 +198,7 @@
 	      <p>This is a canvas. Whatever it is.</p>
 		      <canvas id='draw' width='360' height='270' style='border:1px solid;'></canvas> 
 				<script type='text/javascript'>
-				var canvas=document.getElementById("draw")
+				var canvas=document.getElementById("draw");
 				var x=canvas.getContext("2d");
 				
 				var grad = x.createLinearGradient(50,50,150,150);
@@ -226,6 +226,55 @@
 				x.shadowBlur=5;
 				x.shadowColor='black';
 				x.fillText("в элементе canvas.", 60, 120);
+				</script>
+	    </section>
+	    <section>
+	      <p>This is a canvas-based chess field.</p>
+		      <canvas id='chessField' width='256' height='256' style='border:1px solid;'></canvas> 
+				<script type='text/javascript'>
+					var canvas=document.getElementById("chessField");
+					var x = canvas.getContext("2d");
+					var whiteColor = "#DFCBA1";
+					var blackColor = "#1C1C1C";
+					var fieldWidth = 256;
+					var fieldHeight = 256;
+					var fieldXOffset = 8;
+					var fieldYOffset = 8;
+					var tileWidth = (fieldWidth - 2 * fieldXOffset) / 8;
+					var tileHeight = (fieldHeight - 2 * fieldYOffset) / 8; 
+
+					// Filling all the desk with base color
+					x.fillStyle = whiteColor; 
+					x.fillRect(0, 0, fieldWidth, fieldHeight);
+
+
+					
+					x.fillStyle = blackColor;
+					// Draw a beautiful line
+					x.beginPath()
+					x.moveTo(fieldXOffset - 1, fieldYOffset - 1);
+					
+					x.lineTo(fieldXOffset - 1, fieldHeight - fieldYOffset + 1);
+					x.lineTo(fieldWidth - fieldXOffset + 1, fieldHeight - fieldYOffset + 1);
+					x.lineTo(fieldWidth - fieldXOffset + 1, fieldYOffset - 1);
+					x.lineTo(fieldXOffset - 1, fieldYOffset - 1);
+					
+					x.stroke();
+					
+					// Filling every even tile.
+					var row, column;
+					var flipRow = 0;
+					for (row = 0; row < 8; row++) {
+						
+						for (column = 0; column < 8; column++)
+							if ((row * 8 + column + flipRow) % 2 == 0)
+								x.fillRect(fieldXOffset + column * tileWidth, fieldYOffset + row * tileHeight, tileWidth, tileHeight);
+						
+						if (flipRow == 0)
+							flipRow = 1;
+						else
+							flipRow = 0;
+					}
 				</script>
 	    </section>
 	  </div>
